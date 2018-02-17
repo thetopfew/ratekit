@@ -1,0 +1,5 @@
+<!-- IF searchresults.SHOW_RATEKIT or .similar or topicrow.SHOW_RATEKIT -->
+		<div id="ratekit-ext" class="{L_RATEKIT_VIEWFORUM_COLOR} ratekit-topiclist responsive-hide" title="{L_RATEKIT_VIEWFORUM_HOVER}">
+			<input id="<!-- IF .searchresults -->{searchresults.TOPIC_ID}<!-- ELSEIF .similar -->{similar.TOPIC_ID}<!-- ELSE -->{topicrow.TOPIC_ID}<!-- ENDIF -->" class="rating" disabled data-size="xxs">
+		</div>
+<!-- ENDIF -->

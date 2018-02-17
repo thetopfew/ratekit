@@ -1,0 +1,124 @@
+/**
+* 5-Star Topic RateKit. An extension for the phpBB Forum Software package.
+*
+* @copyright (c) 2017 https://thetopfew.com
+* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+**/
+
+/* ------- Specific to phpBB -------*/
+#ratekit-ext {
+	/* customize rating box for all templates */
+	padding: 0 2px;
+}
+
+/* customize rating box for viewtopic-top */
+.ratekit-top {
+	margin: 0 0 10px 0;
+}
+
+/* customize rating box for viewtopic-bottom */
+.ratekit-bottom {
+	/*display: none; can be turned off in this way */
+	margin: 0 0 10px 0;
+}
+
+/* customize label on left for viewtopic */
+.rateme-topiclabel {
+	font-size: 1.5em;
+}
+
+/* customize overall on right for viewtopic */
+.ratekit-topictotals {
+	font-size: 1.2em;
+	float: right;
+	margin: 10px 0 0 10px;
+}
+
+/* customize stars in viewforum & search */
+.ratekit-topiclist {
+	float: right;
+	margin: -3px 0 0 0;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* ------- RateKit styles -------*/
+.rating {
+	visibility: hidden;
+}
+
+.ratekit-rating {
+	display: inline;
+	margin: 5px 0;
+}
+
+.rating-xxs {
+	font-size: 1.25em;
+}
+
+.rating-xxxs {
+	font-size: 1em;
+}
+
+.star-rating.rating-xxs .caption,
+.star-rating.rating-xxxs .caption {
+	left: 6em;
+	font-size: 90%;
+}
+
+.rating-container .rating-stars:before {
+	text-shadow: none;
+}
+
+.star-rating {
+	display:inline-block;
+	position: relative;
+	width: 5em;
+}
+
+.star-rating .caption {
+	position: absolute;
+	top: 50%;
+	left: 9.5em;
+	margin-top: -0.75em;
+}
+
+.label-black {
+	background: black;
+}
+
+.red .rating-container .rating-stars {
+	color: red;
+}
+
+.green .rating-container .rating-stars {
+	color: darkgreen;
+}
+
+.black .rating-container .rating-stars {
+	color: black;
+}
+
+.blue .rating-container .rating-stars {
+	color: dodgerblue;
+}
+
+/* ------- Mobile Responsive -------*/
+
+/* squeeze & bring to two lines on small screen widths */
+@media only screen and (min-device-width : 300px) and (max-device-width :650px) {
+	.ratekit-topictotals {
+		float: left;
+		width: 100%;
+		font-size: 1em;
+		margin: 0 0 10px 0;
+	}
+}
+/* removes the rate this topic label to keep stars big for fingers on sm screens */
+@media only screen and (min-device-width : 300px) and (max-device-width :400px) {
+	.rateme-topiclabel {
+		display:none;
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"name": "thetopfew/ratekit",
+	"type": "phpbb-extension",
+	"description": "Allow users to instantly leave a star rating for topics, and display an average rating! RateKit is an easy-to-use, ultra low maintenance PHP and jQuery plugin. Tracks by visitors' IP address and stores ratings in a local SQLIte database using phpBB's topic id to track each topic. When it loads, it checks for existing ratings of that topic. If an IP address has rated before, it will not allow another vote. Star color and size are customizable inside the common language file. Administrators may set user permissions to use RateKit, and/or hide in selected forum categories. It almost takes zero skill at all to operate!",
+	"version": "1.3.0",
+	"time": "2018-01-20",
+	"keywords": ["phpbb", "extension", "ratekit", "star", "topic", "rating"],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "andfinally",
+			"homepage": "https://ratekit.com/",
+			"github": "https://github.com/andfinally/ratekit",
+			"role": "Original RateKit Author"
+		},
+		{
+			"name": "Kartik Visweswaran",
+			"homepage": "http://plugins.krajee.com/star-rating",
+			"role": "Bootstrap Star Rating jQuery"
+		},
+		{
+			"name": "kaspir",
+			"email": "kaspir@thetopfew.com",
+			"homepage": "https://forums.thetopfew.com",
+			"role": "Extension Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"phpbb/phpbb": ">=3.2.0,<3.3"
+	},
+	"extra": {
+		"display-name": "5-Star Topic RateKit",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.2.0,<3.3"
+		},
+		"version-check": {
+			"host": "versions.thetopfew.com",
+			"directory": "",
+			"filename": "ratekit_version.json"
+		}
+	}
+}

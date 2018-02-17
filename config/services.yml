@@ -1,0 +1,11 @@
+services:
+    thetopfew.ratekit.listener:
+        class: thetopfew\ratekit\event\listener
+        arguments:
+            - '@auth'
+            - '@config'
+            - '@config_text'
+            - '@template'
+            - '@user'
+        tags:
+            - { name: event.listener }

@@ -1,0 +1,35 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+<h1>{L_RATEKIT_TITLE}</h1>
+<p>{RATEKIT_VERSION}</p>
+
+<form id="acp_ratekit_excluded_forums" method="post" action="{U_ACTION}">
+	<fieldset>
+		<dl>
+			<dt><label for="ratekit_excluded">{L_ACP_RATEKIT_FORUM_EXCLUDED}{L_COLON}</label><br /><span>{L_ACP_RATEKIT_FORUM_EXCLUDED_EXPLAIN}</span></dt>
+			<dd><select id="ratekit_excluded" name="ratekit_excluded[]" multiple="multiple" size="10">{RATEKIT_EXCLUDED_FORUMS}</select></dd>
+		</dl>
+		
+		<dl>
+			<dt><label for="ratekit_excluded_t_types">{L_ACP_RATEKIT_EXCLUDED_T_TYPES}{L_COLON}</label><br /><span>{L_ACP_RATEKIT_EXCLUDED_T_TYPES_EXPLAIN}</span></dt>
+			<dd>
+				<select name="ratekit_excluded_t_types[]" id="ratekit_excluded_t_types" multiple="multiple" size="4">
+					<option value="3" <!-- IF RATEKIT_EXCLUDE_GLOBAL -->selected="selected"<!-- ENDIF -->>Global Announcement</option>
+					<option value="2" <!-- IF RATEKIT_EXCLUDE_ANNOUNCE -->selected="selected"<!-- ENDIF -->>Announcement</option>
+					<option value="1" <!-- IF RATEKIT_EXCLUDE_STICKY -->selected="selected"<!-- ENDIF -->>Sticky</option>
+					<option value="9" <!-- IF RATEKIT_EXCLUDE_LOCKED -->selected="selected"<!-- ENDIF -->>Locked</option>
+				</select>
+			</dd>
+		</dl>
+	
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+	{S_FORM_TOKEN}
+	</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->
